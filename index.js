@@ -67,10 +67,6 @@ module.exports = function(template) {
           template: (node.innerHTML !== "") ? node.innerHTML : null
         });
 
-        if(this.root === node) {
-          this.root = component.el;
-        }
-
         view.on('destroy', function(){
           component.destroy();
         });
@@ -101,6 +97,8 @@ module.exports = function(template) {
      */
     View.prototype.mount = function(node, options) {
       options = options || {};
+      View.emit('before mount', this, node, options);
+      this.emit('before mount', node, options);
       var comp = options.compiler || compiler;
       var html = options.template || template;
       if(!this.el) {

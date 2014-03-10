@@ -8,7 +8,7 @@
   "dependencies": {
     "anthonyshort/attributes": "*",
     "component/each": "*",
-    "ripplejs/compiler": "0.1.0"
+    "ripplejs/compiler": "0.1.1"
   },
   "development": {
     "component/assert": "*",
