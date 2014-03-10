@@ -2,19 +2,20 @@
   "name": "view-compiler",
   "repo": "",
   "description": "Plugin for view to add a compiler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "license": "MIT",
   "dependencies": {
     "anthonyshort/attributes": "*",
-    "component/each": "*"
+    "component/each": "*",
+    "ripplejs/compiler": "0.1.0"
   },
   "development": {
     "component/assert": "*",
-    "wilsonpage/fastdom": "v0.8.4"
+    "wilsonpage/fastdom": "v0.8.4",
+    "ripplejs/view": "0.2.0",
+    "ripplejs/view-interpolate": "0.1.0"
   },
-  "local": ["compiler", "view", "view-interpolate"],
-  "paths": ["../"],
   "scripts": [
     "index.js"
   ]
