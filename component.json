@@ -1,0 +1,21 @@
+{
+  "name": "view-compiler",
+  "repo": "",
+  "description": "Plugin for view to add a compiler",
+  "version": "0.0.1",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "anthonyshort/attributes": "*",
+    "component/each": "*"
+  },
+  "development": {
+    "component/assert": "*",
+    "wilsonpage/fastdom": "v0.8.4"
+  },
+  "local": ["compiler", "view", "view-interpolate"],
+  "paths": ["../"],
+  "scripts": [
+    "index.js"
+  ]
+}
