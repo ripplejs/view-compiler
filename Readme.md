@@ -1,49 +1,24 @@
 
-# view-interpolate
+# view-compiler
 
-  Plugin for view to add interpolation. This will allow views to interpolate expressions in strings using the view state. Whenever the state changes the string will be re-rendered.
+[![Build Status](https://travis-ci.org/ripplejs/view-compiler.png?branch=master)](https://travis-ci.org/ripplejs/view-compiler)
+
+  Plugin for view to add template rendering, mount and unmounting.
+
 
 ## Installation
 
   Install with [component(1)](http://component.io):
 
-    $ component install ripples/view-interpolate
+    $ component install ripplejs/view-compiler
 
 ## Usage
 
-Add this as a plugin for the view:
+Add this as a plugin for the view and pass in a template.
 
 ```js
-View.use(interpolate);
+View.use(compiler(template));
 ```
-
-## API
-
-This plugin adds a number of methods to the view for interpolating expressions in strings.
-
-### Static Properties
-
-```js
-View.filter('foo', fn);
-```
-
-Add a [new filter](https://github.com/ripplejs/interpolate#getting-started) that can be used in expressions.
-
-```js
-View.delimiters(regex)
-```
-
-Set the regex used for finding expressions in strings. By default this looks for `{{ expression }}`
-
-### Instance Properties
-
-```js
-view.interpolate('Hello {{planet}}', callback)
-```
-
-Interpolate a string using values on the view's state. In this case it will lookup the `planet` property on the views state. If it can't find it on the current view, it will look at the views owner and trace back up the tree.
-
-If a property can't be found it will throw an error.
 
 ## License
 
