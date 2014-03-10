@@ -40,6 +40,15 @@ describe('view-compiler', function(){
     view.unmount();
   })
 
+  it('should unmount when destroyed', function (done) {
+    var view = new View();
+    view.on('unmount', function(){
+      done();
+    });
+    view.mount(document.body);
+    view.destroy();
+  });
+
   it('should have a different compiler for each view', function () {
     var one = new One();
     var two = new Two();
